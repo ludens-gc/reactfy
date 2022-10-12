@@ -1,0 +1,15 @@
+.App {
+  header {
+    margin: 0;
+  }
+  main {
+    height: calc(100vh - 3rem);
+    background-color: #0000ff;
+    margin: 0;
+  }
+  footer {
+    margin: 0;
+    height: 3rem;
+    background-color: #ff0000;
+  }
+}

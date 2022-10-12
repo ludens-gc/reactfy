@@ -1,0 +1,25 @@
+.navbar {
+  overflow: hidden;
+  background-color: #333333;
+  .logo {
+    float: left;
+    padding-top: 0.44rem;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .pages-item {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .pages-item:hover {
+    background-color: #004450;
+  }
+}

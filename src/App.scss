@@ -1,15 +1,21 @@
+$mainBackground: #242424;
+$darkestGrey: #040404;
+$textColor: #ffffff;
+
 .App {
+  font-family: Arial, Helvetica, sans-serif;
+  color: $textColor;
+  display: grid;
+  background-color: $mainBackground;
   header {
-    margin: 0;
+    background-color: $darkestGrey;
   }
   main {
-    height: calc(100vh - 3rem);
-    background-color: #0000ff;
-    margin: 0;
+    min-height: calc(100vh - 9.6rem);
   }
   footer {
-    margin: 0;
-    height: 3rem;
-    background-color: #ff0000;
+    width: 100%;
+    background-color: $darkestGrey;
+    text-align: center;
   }
 }

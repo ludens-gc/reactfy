@@ -1,11 +1,15 @@
 $logoColor: #00d8ff;
-.navbar {
+.navBar {
   overflow: hidden;
   .logo {
     float: left;
     padding: 0.88rem 1rem;
     &:hover {
       background-color: darken($logoColor, 25%);
+    }
+    &::after {
+      content: "Reactfy";
+      color: #ffffff;
     }
   }
   ul {
@@ -14,7 +18,7 @@ $logoColor: #00d8ff;
     padding: 0;
     overflow: hidden;
   }
-  .pages-item {
+  .pagesItem {
     float: right;
     text-align: center;
     padding: 1.31rem 1rem;

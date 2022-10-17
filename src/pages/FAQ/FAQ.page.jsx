@@ -1,5 +1,14 @@
+import "./FAQ.scss";
+
 const FAQ = () => {
-  return <h1>FAQ</h1>;
+  return (
+    <div>
+      <h1>FAQ - Ajuda rápida</h1>
+      <div>
+        <p></p>
+      </div>
+    </div>
+  );
 };
 
 export default FAQ;

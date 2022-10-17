@@ -1,12 +1,12 @@
-import "./App.scss";
-import NavBar from "./components/NavBar/NavBar.component";
-import Footer from "./components/Footer/Footer.component";
+import style from "./App.module.scss";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import AppRoutes from "./AppRoutes";
 import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="App">
+    <div className={style.App}>
       <header>
         <NavBar />
       </header>

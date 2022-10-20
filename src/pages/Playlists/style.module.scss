@@ -1,0 +1,8 @@
+$logoColor: #00d8ff;
+
+.playlistCard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  gap: 1rem;
+}

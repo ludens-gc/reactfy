@@ -1,16 +1,15 @@
 // import style from "./style.module.scss";
 
-const SelectField = (props) => {
-  const { value, handleChange, label, itens, isRequired } = props;
+const SelectField = ({ value, handleChange, label, itens, ...props }) => {
   return (
     <div>
       <label htmlFor={label}>{label}</label>
       <select
-        required={isRequired}
         name={label}
         id={label}
         value={value}
         onChange={(event) => handleChange(event.target.value)}
+        {...props}
       >
         <option disabled value="">
           Selecione...

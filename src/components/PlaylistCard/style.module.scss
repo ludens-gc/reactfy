@@ -1,0 +1,24 @@
+$logoColor: #00d8ff;
+.card {
+  border: 2px solid #151515;
+  background-color: #101010;
+  border-radius: 4px;
+  padding: 0.5rem;
+  transition: transform 0.2s;
+  &:hover {
+    transform: translate(0, -1rem);
+  }
+}
+
+.cardCover {
+  width: 100%;
+  height: 282px;
+  border-radius: 8px;
+}
+
+.cardTitle {
+  font-size: 1.75rem;
+  text-align: center;
+  line-height: 1.75rem;
+  margin: 1.5rem 0 1.75rem;
+}

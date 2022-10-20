@@ -1,24 +1,11 @@
-// import style from "./style.module.scss";
+// import style from "./style.module.scss"
 
-import { useState } from "react";
-
-const RadioField = (props) => {
-  const { value, handleChange, isRequired } = props;
-
-  const [isChecked, setIsChecked] = useState(false);
-
+const RadioField = ({ value, ...props }) => {
   return (
     <div>
       <label>
-        <input
-          value={value}
-          onChange={handleChange}
-          required={isRequired}
-          type="checkbox"
-          checked={isChecked}
-        />
+        <input value={value} type="checkbox" {...props} />
         <span>{`${value}`}</span>
-        <span>{isChecked ? "Selected" : "Unchecked"}</span>
       </label>
     </div>
   );

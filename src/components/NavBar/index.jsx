@@ -1,19 +1,32 @@
+import { Link } from "react-router-dom";
 import Logo from "../Logo";
-import style from "./NavBar.module.scss";
+import style from "./style.module.scss";
 
 const NavBar = () => {
   return (
-    <nav className={style.navBar}>
-      <ul className={style.pagesLists}>
-        <li>
-          <Logo className={style.logo} />
-        </li>
-        <li className={style.pagesItem}>Home</li>
-        <li className={style.pagesItem}>Cadastro</li>
-        <li className={style.pagesItem}>Playlists</li>
-        <li className={style.pagesItem}>FAQ</li>
-      </ul>
-    </nav>
+    <header>
+      <nav className={style.navBar}>
+        <ul className={style.pagesLists}>
+          <Link to="/">
+            <li>
+              <Logo className={style.logo} />
+            </li>
+          </Link>
+          <Link to="/">
+            <li className={style.pagesItem}>Home</li>
+          </Link>
+          <Link to="/register">
+            <li className={style.pagesItem}>Cadastro</li>
+          </Link>
+          <Link to="/playlists">
+            <li className={style.pagesItem}>Playlists</li>
+          </Link>
+          <Link to="/faq">
+            <li className={style.pagesItem}>FAQ</li>
+          </Link>
+        </ul>
+      </nav>
+    </header>
   );
 };
 

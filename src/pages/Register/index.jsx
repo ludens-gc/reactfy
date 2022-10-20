@@ -10,15 +10,12 @@ const Register = () => {
     setUsers([...users, user]);
   };
 
+  console.log(users);
+
   return (
     <>
-      <header>
-        <img className={style.logo} src="./react.svg" alt="react logo" />
-        <h2>Inscreva-se grátis e comece a curtir.</h2>
-      </header>
-      <main>
-        <RegisterForm registerUser={(user) => whenNewRegisteredUser(user)} />
-      </main>
+      <h1>Cadastro</h1>
+      <RegisterForm registerUser={(user) => whenNewRegisteredUser(user)} />
     </>
   );
 };

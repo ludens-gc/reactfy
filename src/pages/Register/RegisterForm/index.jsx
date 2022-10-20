@@ -1,5 +1,4 @@
 import InputField from "../../../components/FormFields/InputField";
-import SelectField from "../../../components/FormFields/SelectField";
 import RadioField from "../../../components/FormFields/RadioField";
 import Button from "../../../components/Button";
 import { useState } from "react";
@@ -9,25 +8,41 @@ const RegisterForm = (props) => {
   const { registerUser } = props;
 
   const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
-  const [nomePerfil, setNomePerfil] = useState("");
-  const [data, setData] = useState("");
-  const [genero, setGenero] = useState("");
-  const [termos, setTermos] = useState(false);
+  const [confirmEmail, setConfirmEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [userName, setUserName] = useState("");
+  const [date, setDate] = useState("");
+  const [gender, setGender] = useState("");
+  const [terms, setTerms] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(
-      `Success => ${email}, ${senha}, ${nomePerfil}, ${data}, ${genero}, ${termos}`
-    );
-    registerUser({
-      email,
-      senha,
-      nomePerfil,
-      data,
-      genero,
-      termos,
-    });
+    if (email === confirmEmail) {
+      registerUser({
+        email,
+        password,
+        userName,
+        date,
+        gender,
+        terms,
+      });
+      console.log(
+        `Success => ${email}, ${password}, ${userName}, ${date}, ${gender}, ${terms}`
+      );
+      setEmail("");
+      setConfirmEmail("");
+      setPassword("");
+      setUserName("");
+      setDate("");
+      setGender("");
+      setTerms(false);
+    } else {
+      console.log("emails diferentes");
+    }
+  };
+
+  const handleBlur = (event) => {
+    console.log(event.target.value);
   };
 
   return (
@@ -35,42 +50,58 @@ const RegisterForm = (props) => {
       <form action="" onSubmit={handleSubmit}>
         <InputField
           type="email"
-          isRequired={true}
+          label="Email"
+          required
           value={email}
           handleChange={(value) => setEmail(value)}
           placeholder="Digite o email..."
         />
         <InputField
+          type="email"
+          label="Confirmar email"
+          required
+          value={confirmEmail}
+          onBlur={handleBlur}
+          handleChange={(value) => setConfirmEmail(value)}
+          placeholder="Digite o email..."
+        />
+        <InputField
           type="password"
-          isRequired={true}
-          value={senha}
-          handleChange={(value) => setSenha(value)}
+          label="Senha"
+          value={password}
+          required
+          handleChange={(value) => setPassword(value)}
           placeholder="Digite a senha..."
         />
         <InputField
           type="text"
-          isRequired={true}
-          value={nomePerfil}
-          handleChange={(value) => setNomePerfil(value)}
+          label="Nome do Perfil"
+          value={userName}
+          required
+          handleChange={(value) => setUserName(value)}
           placeholder="Digite o nome do perfil..."
         />
         <InputField
           type="date"
-          isRequired={true}
-          value={data}
-          handleChange={(value) => setData(value)}
+          label="Data de nascimento"
+          value={date}
+          handleChange={(value) => setDate(value)}
+          required
           placeholder="Selecione a data..."
         />
         <RadioField
           options={["Masculino", "Feminino", "Outros", "Prefiro não dizer"]}
-          isRequired={true}
-          value={genero}
-          handleChange={(value) => setGenero(value)}
+          label="Gênero"
+          value={gender}
+          required
+          handleChange={(value) => setGender(value)}
         />
         <CheckboxField
-          isRequired={true}
-          value={termos}
-          handleChange={({ target }) => setTermos(target.checked)}
+          value={terms}
+          label="Li e aceito os termos"
+          required
+          checked={terms}
+          onChange={() => setTerms((prev) => !prev)}
         />
         <Button>Enviar</Button>
       </form>

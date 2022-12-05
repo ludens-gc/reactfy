@@ -12,10 +12,10 @@ const NavBar = () => {
               <Logo className={style.logo} />
             </li>
           </Link>
-          <Link to="/">
-            <li className={style.pagesItem}>Home</li>
+          <Link to="/users/login">
+            <li className={style.pagesItem}>Login</li>
           </Link>
-          <Link to="/register">
+          <Link to="/users/register">
             <li className={style.pagesItem}>Cadastro</li>
           </Link>
           <Link to="/playlists">

@@ -1,21 +1,38 @@
+import axios from "axios";
+import { useEffect } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
-import db from "../../../json/db.json";
 
 const PlaylistPage = () => {
   const params = useParams();
+  const [playlistInfo, setPlaylistInfo] = useState([]);
 
-  console.log(params);
-  console.log(db);
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3000/playlists/${params.id}/musics/`)
+      .then((res) => {
+        console.log(res);
+        setPlaylistInfo(res.data);
+      });
+    console.log(playlistInfo);
+  }, []);
 
-  const playlist = db.find((playlist) => {
-    return playlist.id === Number(params.id);
+  const musicsList = playlistInfo.map((item) => {
+    return (
+      <>
+        <p>{item.MusicName}</p>
+        <p>{item.Artist}</p>
+        <audio controls>
+          <source src={item.FilePath} />
+        </audio>
+      </>
+    );
   });
-
-  console.log(playlist);
 
   return (
     <>
-      <h1>Playlist {`${params.id}`}</h1>
+      <h1>Playlist {`${playlistInfo[0].PlaylistName}`}</h1>
+      {musicsList}
     </>
   );
 };

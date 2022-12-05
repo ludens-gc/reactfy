@@ -1,8 +1,7 @@
 // import style from "./style.module.scss";
 
-const Button = (props) => {
-  const { children } = props;
-  return <button>{children}</button>;
+const Button = ({ children, ...props }) => {
+  return <button {...props}>{children}</button>;
 };
 
 export default Button;

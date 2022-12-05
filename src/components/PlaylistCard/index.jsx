@@ -4,10 +4,10 @@ const PlaylistCard = ({ playlist }) => {
     <div className={style.card}>
       <img
         className={style.cardCover}
-        src={playlist.cover}
+        src={playlist.Cover}
         alt="capa da playlist"
       />
-      <h2 className={style.cardTitle}>{playlist.title}</h2>
+      <h2 className={style.cardTitle}>{playlist.PlaylistName}</h2>
     </div>
   );
 };

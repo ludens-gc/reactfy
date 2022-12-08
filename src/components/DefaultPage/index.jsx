@@ -7,9 +7,7 @@ const DefaultPage = () => {
   return (
     <>
       <NavBar />
-      <main className={style.main}>
-        <Outlet />
-      </main>
+      <Outlet className={style.main} />
       <Footer />
     </>
   );

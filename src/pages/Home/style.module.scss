@@ -1,0 +1,30 @@
+.main {
+  min-height: calc(100vh - 9.6rem);
+  margin: 0;
+}
+
+#showcase {
+  height: calc(100vh - 9.6rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: url("/assets/image/showcase.webp") center center/cover;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: color;
+}
+
+#showcase .showcaseContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#showcase .showcaseContainer h2 {
+  font-size: 5rem;
+}
+
+#showcase .showcaseContainer p {
+  margin: 15px 0;
+  font-size: 1.1rem;
+}

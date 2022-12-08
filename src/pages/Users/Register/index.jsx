@@ -3,10 +3,12 @@ import style from "./style.module.scss";
 
 const Register = () => {
   return (
-    <>
-      <h1>Cadastro</h1>
-      <RegisterForm />
-    </>
+    <main className={style.main}>
+      <div className={style.formBody}>
+        <h1>Cadastro</h1>
+        <RegisterForm className={style.container} />
+      </div>
+    </main>
   );
 };
 

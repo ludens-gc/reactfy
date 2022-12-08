@@ -1,12 +1,12 @@
-// import style from "./style.module.scss";
+import style from "./style.module.scss";
 
 const RadioField = ({ options, value, handleChange, label, ...props }) => {
   return (
     <div>
-      <label>{label}</label>
+      <h4>{label}</h4>
       {options.map((option) => {
         return (
-          <label key={option}>
+          <label className={style.genderLabel} key={option}>
             <input
               value={option}
               onChange={(event) => handleChange(event.target.value)}

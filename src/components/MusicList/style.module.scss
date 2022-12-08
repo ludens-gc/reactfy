@@ -1,0 +1,15 @@
+$logoColor: #00d8ff;
+
+.musicSection {
+  display: grid;
+  // width: 80%;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  background-color: darken($logoColor, 25%);
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  audio {
+    background-color: none;
+  }
+}

@@ -1,4 +1,4 @@
-// import style from "./style.module.scss";
+import style from "./style.module.scss";
 
 const InputField = ({
   value,
@@ -9,7 +9,7 @@ const InputField = ({
   ...props
 }) => {
   return (
-    <div>
+    <div className={style.inputBox}>
       <label htmlFor={label}>{label}</label>
       <input
         value={value}

@@ -1,11 +1,11 @@
-// import style from "./style.module.scss"
+import style from "./style.module.scss";
 
-const RadioField = ({ value, ...props }) => {
+const RadioField = ({ label, value, ...props }) => {
   return (
-    <div>
+    <div className={style.checkBox}>
       <label>
         <input value={value} type="checkbox" {...props} />
-        <span>{`${value}`}</span>
+        <span>{`${label}`}</span>
       </label>
     </div>
   );

@@ -1,0 +1,23 @@
+$logoColor: #00d8ff;
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.1rem;
+  label {
+    font-size: 0.88rem;
+    font-weight: 600;
+  }
+  input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 0.63rem;
+    &:hover {
+      background-color: #eeeeee;
+    }
+    &:focus-visible {
+      outline: 1px solid darken($logoColor, 25%);
+    }
+  }
+}

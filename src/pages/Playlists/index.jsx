@@ -31,10 +31,10 @@ const Playlists = () => {
     );
   });
   return (
-    <>
+    <main>
       <h1>Playlists</h1>
       <ul className={style.playlistCard}>{res}</ul>
-    </>
+    </main>
   );
 };
 

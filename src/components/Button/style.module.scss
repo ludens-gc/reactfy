@@ -1,0 +1,15 @@
+$logoColor: #00d8ff;
+
+.button {
+  background-color: $logoColor;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+  border-radius: 1rem;
+  &:hover {
+    background-color: darken($logoColor, 25%);
+  }
+  &:disabled {
+    background-color: transparentize($color: #ff0000, $amount: 0.5);
+  }
+}
